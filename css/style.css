@@ -1,0 +1,1126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ================= ROOT ================= */
+:root {
+  --bg: #f6f8ff;
+  --card: #ffffff;
+  --heading: #1f2a44;
+  --text: #4b5563;
+  --text-sub: #6b7280;
+  --primary: #6366f1;
+  --tag-bg: #eef2ff;
+  --shadow: 0 20px 40px rgba(99,102,241,.15);
+}
+
+body.dark {
+  --bg: #0b1020;
+  --card: #111a3a;
+  --heading: #f8fafc;
+  --text: #cbd5f5;
+  --text-sub: #a5b4fc;
+  --primary: #7c83ff;
+  --tag-bg: #1b245a;
+  --shadow: 0 20px 40px rgba(0,0,0,.6);
+}
+
+/* card chung  */
+.price-box,
+.skill-box,
+.service-box {
+  background: #1b2240;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  
+}
+
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ================= NAV ================= */
+.nav {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(14px);
+  background: rgba(255,255,255,.7);
+}
+
+body.dark .nav {
+  background: rgba(15,15,40,.75);
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.menu {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-sub);
+  font-size: 14px;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  background: var(--primary);
+}
+
+/* Dark toggle */
+.theme-toggle {
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  transition: .25s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.08);
+}
+
+/* ================= LAYOUT CHUNG ================= */
+.page {
+  padding: 24px 16px;
+}
+
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+
+/* ================= HERO (DÙNG CHUNG 4 TRANG) ================= */
+
+
+
+
+/* ================= CARD ================= */
+.card {
+  background: var(--card);
+  border-radius: 22px;
+  padding: 12px;
+  margin-bottom: 4px;
+  box-shadow: var(--shadow);
+  animation: fadeUp .7s ease;
+}
+
+/* ================= TAG ================= */
+.tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.tag {
+  padding: 8px 14px;
+  border-radius: 14px;
+  font-size: 13px;
+  color: #fff;
+  background: linear-gradient(135deg, #7c7cff, #b58bff);
+  transition: .25s;
+}
+
+.tag:hover {
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* ================= SKILL ================= */
+.skill {
+  margin-top: 14px;
+}
+
+.skill-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.bar {
+  height: 8px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #7c7cff, #ff8bd6);
+}
+
+/* ================= CONTACT ================= */
+.contact-title {
+  color: var(--primary);
+}
+.contact-list a {
+  display: block;
+  margin-top: 12px;
+  padding: 14px 16px;
+  border-radius: 162px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--text);
+  transition: .25s;
+}
+
+.contact-list a:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-sub);
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+}
+
+.typing-text {
+  font-size: 15px;
+  color: #a88bff;
+  margin: 10px 0 16px;
+  min-height: 22px;
+}
+
+.typing-text::after {
+  content: "|";
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+
+.hi-text {
+  font-size: 14px;
+  color: #bcbcff;
+}
+
+/* Typing text */
+.typing {
+  font-size: 16px;
+  color: #8f9bff;
+  min-height: 22px;
+}
+
+.cursor {
+  color: #8f9bff;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,50%,100% { opacity: 1; }
+  25%,75% { opacity: 0; }
+}
+
+/* Social icons */
+.socials {
+  display: flex;
+  /* gap: 12px; */
+  margin-top: 32px;
+}
+
+.socials a {
+  width: 42px;
+  height: 42px;
+  background: #1a1f3c;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #6a5cff, #c77dff);
+}
+
+
+.hi-text {
+  color: #b7c0ff;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.name {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Typing text */
+.typing {
+  font-size: 16px;
+  color: #8f9bff;
+  min-height: 15px;
+}
+
+.cursor {
+  color: #8f9bff;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,50%,100% { opacity: 1; }
+  25%,75% { opacity: 0; }
+}
+
+/* Social icons */
+.social {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,.08);
+  transition: .3s;
+}
+
+.socials a {
+  width: 42px;
+  height: 42px;
+  background: #1a1f3c;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #6a5cff, #c77dff);
+}
+/* ===== HERO FINAL (CHUẨN) ===== */
+.hero {
+  display: flex;
+  gap: 32px;
+  padding: 24px;
+  border-radius: 24px;
+  background: linear-gradient(135deg,#0f1220,#151a3d);
+}
+
+/* LEFT */
+
+.hero-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.hero-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RIGHT */
+.hero-right {
+  max-width: 500px;
+}
+
+.hero-hi {
+  font-size: 14px;
+  color: #bcbcff;
+  margin-bottom: 6px;
+}
+
+.hero-name {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.hero-desc {
+  font-size: 15px;
+  color: #a0a0ff;
+  margin-bottom: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
+.hero-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.hero-social .social {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.hero-social .social img {
+  width: 22px;
+  height: 22px;
+}
+
+.social:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg,#9b6cff,#ff7bd8);
+}
+.social.fb:hover {
+  background: linear-gradient(135deg, #1877f2, #4e9cff);
+}
+
+.social.tiktok:hover {
+  background: linear-gradient(135deg, #00f2ea, #ff0050);
+}
+
+.social.instagram:hover {
+  background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
+}
+
+.social.zalo:hover {
+  background: linear-gradient(135deg, #0068ff, #00c6ff);
+}
+
+.social.telegram:hover {
+  background: linear-gradient(135deg, #0088cc, #00bfff);
+}
+/* ===== HOME SECTION ===== */
+.home-sections {
+  max-width: 660px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 5px;
+}
+
+/* CARD CHUNG */
+.card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow);
+}
+
+
+/* ===== BẢNG GIÁ ===== */
+.price-card {
+  height: 250px;
+  font-size: 16px;
+  background: #efe8c9;
+  color: #2abbf5;
+}
+
+.price-card h3 {
+  color: #2dc1ee;
+  margin-bottom: 10px;
+}
+
+.price-card .sub {
+  font-size: 20px;
+  margin-bottom: 2px;
+  /* color: #00c6ff; */
+  margin-top: 3px;
+}
+
+.price-list {
+  list-style: none;
+  padding-left: 0;
+  /* color: #dd2a7b; */
+  margin-top: 1px;
+}
+
+.price-list li {
+  font-size: 14px;
+  margin-bottom: 5px;
+  /* color: cyan; */
+}
+
+.price-list a {
+  color: #3b6cff;
+  text-decoration: none;
+  margin-left: 6px;
+}
+
+.btn-ok {
+  margin-top: 5px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: none;
+  background: #e1f0ff;
+  cursor: pointer;
+}
+
+/* ===== SKILL ===== */
+.skill-card h3 {
+  text-align: center;
+  margin-bottom: 1px;
+  /* color: green; */
+
+}
+
+.skill {
+  margin-bottom: 5px;
+}
+
+.skill span {
+  display: inline-block;
+  font-size: 13px;
+}
+
+.skill span:last-child {
+  float: right;
+  color: #bcbcff;
+}
+
+.bar {
+  height: 8px;
+  background: #0f1530;
+  border-radius: 10px;
+  margin-top: 68px;
+  overflow: hidden;
+}
+
+.bar i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg,#ff9a3c,#ffd24c);
+  border-radius: 10px;
+}
+
+/* ===== DỊCH VỤ ===== */
+.service-card h3 {
+  margin-bottom: 10px;
+  color: rgba(99,102,241,.18);
+  /* background-color: #00bfff; */
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.service-tags span {
+  background: var(--tag-bg);
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+/* ===== ABOUT WRAP ===== */
+.about-wrap {
+  max-width: 880px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===== BOX CHUNG ===== */
+.about-wrap .card {
+  background: linear-gradient(135deg,#141a35,#1b234d);
+  border-radius: 16px;
+  padding: 16px 18px;        /* GIẢM PADDING */
+  box-shadow: 0 14px 32px rgba(0,0,0,.45);
+}
+
+/* ===== TIÊU ĐỀ ===== */
+.about-wrap h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* ===== NỘI DUNG ===== */
+.about-wrap p,
+.about-wrap li {
+  font-size: 14px;
+  color: var(--text-sub);
+}
+
+/* ===== TAG UY TÍN ===== */
+.about-tags {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.about-tags span {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #0f1530;
+  color: #cfd3ff;
+}
+
+/* ===== KINH NGHIỆM ===== */
+.exp-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.exp-list li {
+  margin-bottom: 2px;
+}
+
+/* ===== DỊCH VỤ ===== */
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.service-tags span {
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 999px;
+  background: #0f1530;
+  color: #d4d7ff;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .about-wrap {
+    max-width: 100%;
+  }
+}
+.card {
+  background: var(--card-bg);
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+.service-tags .tag {
+  background: var(--tag-bg);
+  color: var(--primary);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.contact-btn,
+.btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn.outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+/* ================= CONTACT – CLEAN VERSION ================= */
+
+/* Tiêu đề Contact */
+/* ===== CONTACT WRAP ===== */
+/* ===== CONTACT WRAP ===== */
+.contact-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 11px 15px;
+  max-width: 1000px;
+}
+
+.contact-box {
+  max-width: 1100px;
+  width: 100%;
+  padding: 48px;
+  border-radius: 28px;
+  background: linear-gradient(135deg,#0f1220,#151a3d);
+  box-shadow: 0 30px 80px rgba(0,0,0,.55);
+}
+
+/* ===== SERVICE ===== */
+.service-box {
+  width: 100%;
+  height: 480px;        /* ⬅ tăng chiều cao */
+  font-size: 62px;     /* ⬅ chữ SERVICE to hơn */
+  font-weight: 800;
+  margin: 0 auto 70px; /* ⬅ thoáng hơn */
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  gap: 14px;           /* ⬅ giãn khoảng cách */
+}
+
+.service-tags {
+  gap: 12px;
+  background-color: #7c7cff;
+  /* color: #13e1fc; */
+  border-radius: 15px;
+}
+.contact-wrap .service-tags span{
+  color: #e5e7ff;
+  width: 100%;
+}
+
+
+/* ===== TITLE ===== */
+.contact-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 48px;
+  color: var(--contact-title);
+}
+
+/* ===== GRID ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: rgba(255,255,255,.05);
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.4);
+}
+
+/* ===== CONTACT BUTTON ===== */
+.contact-btn {
+  display: block;
+  margin-top: 14px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  text-decoration: none;
+  text-align: center;
+  background: rgba(255,255,255,.08);
+  color: #e5e7ff;
+  transition: .25s;
+}
+
+.contact-btn.primary {
+  background: linear-gradient(135deg,#7c7cff,#b58bff);
+  color: #fff;
+}
+
+.contact-btn:hover {
+  transform: translateY(-4px);
+}
+
+/* ===== FORM ===== */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: none;
+  background: rgba(255,255,255,.08);
+  color: #ffffff;
+}
+
+.form-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 14px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg,#7c7cff,#b58bff);
+  color: #fff;
+}
+
+.btn.outline {
+  border: 1px solid #7c7cff;
+  color: #7c7cff;
+  background: transparent;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .contact-box {
+    padding: 32px 20px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Title Contact */
+.contact-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 40px 0;
+  color: var(--text-main);
+}
+
+/* ===== GRID GIỮA TRANG ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(340px, 420px));
+  justify-content: center;   /* ⭐ CĂN GIỮA THEO NGANG */
+  gap: 40px;
+}
+
+.contact-grid .card {
+  padding: 28px;
+  border-radius: 22px;
+  min-height: 360px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+footer {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-sub);
+  margin: 40px 0 20px;
+}
+/* ===== SERVICE ===== */
+.service-section {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.05);
+   border-radius: 18px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 16px 20px;
+  box-shadow: 0 0 30px rgba(99,102,241,.15);
+}
+
+.service-card h3 {
+  color: #0eccfc;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.service-tags span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(14, 17, 204, 0.15);
+  color: #c7d2fe;
+  flex: 1;
+  text-align: center;
+}
+
+
+/* ===== BANK ===== */
+.bank-section {
+  max-width: 900px;
+  margin: 60px auto;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.bank-title {
+  font-size: 28px;
+  color: #6e2e2e;
+  margin-bottom: 28px;
+}
+
+.bank-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 24px;
+}
+
+.bank-card {
+  background: rgba(255,255,255,.05);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(99,102,241,.15);
+}
+
+.bank-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg,#6366f1,#8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 auto 12px;
+
+}
+
+.bank-card h4 {
+  color: #0eccfc;
+  margin-bottom: 6px;
+}
+
+.bank-card p {
+  font-size: 13px;
+  color: #0eccfc;
+}
+
+.bank-number {
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.copy-btn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg,#6366f1,#8b5cf6);
+}
+
+.bank-note-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.bank-note {
+  margin-top: 40px;
+  text-align: center;
+  color: #4da6ff;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+/* ===== CONTACT GRID CENTER ===== */
+.contact-grid {
+  max-width: 900px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== CONTACT CARD ===== */
+.contact-grid .card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 0 35px rgba(99,102,241,.18);
+}
+
+/* ===== TITLE ===== */
+.quick-contact h3 {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+.quick-contact h3,
+.contact-form h3 {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+/* ===== CONTACT BUTTON ===== */
+.contact-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(255,255,255,0.06);
+  color: var(--text-main);
+  transition: 0.25s;
+}
+/* BUTTON NỔI BẬT */
+.contact-btn.primary {
+  background: linear-gradient(135deg, #7b6cff, #9b8cff);
+  color: #fff;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.12);
+}
+
+/* ===== FORM INPUT ===== */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: none;
+  margin-bottom: 14px;
+  font-size: 15px;
+  background: rgba(255,255,255,0.08);
+  color: var(--text-main);
+}
+.contact-form textarea {
+  min-height: 120px;
+  resize: none;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* ===== FORM ACTION ===== */
+.form-actions {
+  display: flex;
+  gap: 14px;
+}
+
+.form-actions .btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #7b6cff, #9b8cff);
+  color: #fff;
+}
+
+.btn.outline {
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--text-main);
+}
+.bank-number {
+  font-weight: 600;
+  color: #6b6bff;
+}
+
+.bank-value {
+  letter-spacing: 1px;
+}
