@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Nguyễn Bùi Trường | Bank</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<script>
+function copySTK(btn) {
+  const value = btn
+    .closest(".bank-card")
+    .querySelector(".bank-value")
+    .innerText
+    .trim();
+
+  navigator.clipboard.writeText(value).then(() => {
+    btn.innerText = "Đã copy ✔";
+    btn.classList.add("copied");
+
+    setTimeout(() => {
+      btn.innerText = "Copy STK";
+      btn.classList.remove("copied");
+    }, 2000);
+  });
+}
+</script>
+
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="logo">Nguyễn Bùi Trường</div>
+    <div class="menu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="bank.html" class="nav-link active">Bank</a>
+      <button class="theme-toggle" id="themeBtn">🌙</button>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <section class="hero">
+
+    <!-- LEFT -->
+    <div class="hero-left">
+      <div class="hero-logo">
+        <img src="images/logo.png" alt="Logo">
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hero-right">
+      <p class="hi-text">Hi, I am</p>
+      <h1 class="name">Trường</h1>
+
+      <!-- TYPING TEXT -->
+      <p class="typing">
+        <span id="typing-text"></span>
+        <span class="cursor">|</span>
+      </p>
+
+      <!-- SOCIAL ICON -->
+      <div class="hero-social">
+        <a href="https://www.facebook.com/ngbuitruongg01/" class="social fb">
+          <img src="icons/facebook.svg" alt="Facebook">
+        </a>
+
+        <a href="https://www.tiktok.com/@nguyen.bui.truong6" class="social tiktok">
+          <img src="icons/tiktok.svg" alt="TikTok">
+        </a>
+
+        <a href="https://zalo.me/84985204819" class="social zalo">
+          <img src="icons/zalo.svg" alt="Zalo">
+        </a>
+
+        <a href="#" class="social telegram">
+          <img src="icons/telegram.svg" alt="Telegram">
+        </a>
+
+        <a href="https://www.instagram.com/hondaicodonn/" class="social instagram">
+          <img src="icons/instagram.svg" alt="Instagram">
+        </a>
+      </div>
+    </div>
+
+  </section>
+</div>
+<section class="service-section">
+  <div class="service-card">
+    <h3>Dịch vụ</h3>
+
+    <div class="service-tags">
+      <span>Tài khoản game</span>
+      <span>Mạng xã hội</span>
+      <span>Công cụ tự động hóa</span>
+      <span>Thiết kế Web mini</span>
+    </div>
+  </div>
+</section>
+<section class="bank-section">
+  <h2 class="bank-title">Bank</h2>
+
+  <div class="bank-grid">
+
+    <!-- MB BANK -->
+<div class="bank-card">
+  <div class="bank-logo">MB</div>
+  <h4>MB Bank</h4>
+  <p>CTK: Nguyễn Thị Ý Vy</p>
+
+<p class="bank-number">
+  SDT: <span class="bank-value">0366567129</span>
+</p>
+
+  <button class="copy-btn" onclick="copySTK(this)">
+    Copy STK
+  </button>
+</div>
+
+
+    <!-- VIETCOMBANK -->
+<div class="bank-card">
+  <div class="bank-logo">TCB</div>
+  <h4>TechComBank</h4>
+  <p>CTK: Nguyễn Bùi Trường</p>
+
+<p class="bank-number">
+  SDT: <span class="bank-value">2601291210</span>
+</p>
+
+  <button class="copy-btn" onclick="copySTK(this)">
+    Copy STK
+  </button>
+</div>
+
+    <!-- MOMO -->
+<div class="bank-card">
+  <div class="bank-logo">MM</div>
+  <h4>MoMo</h4>
+  <p>CTK: Truong Thi Lam</p>
+
+<p class="bank-number">
+  SDT: <span class="bank-value">0974286142</span>
+</p>
+
+  <button class="copy-btn" onclick="copySTK(this)">
+    Copy STK
+  </button>
+</div>
+  </div> <!-- ❗ ĐÓNG GRID Ở ĐÂY -->
+<div class="bank-note-wrap">
+  <p class="bank-note">
+    Vui lòng ghi rõ nội dung chuyển khoản:
+    <br>
+    <strong>"Tên + dịch vụ"</strong>
+  </p>
+</div>
+
+
+
+<footer>© 2026 Nguyễn Bùi Trường • Made with ❤️</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
