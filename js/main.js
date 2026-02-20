@@ -188,3 +188,13 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
   window.location.href = mailto;
 });
+function sendMail(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("nameInput").value;
+  const email = document.getElementById("emailInput").value;
+  const message = document.getElementById("messageInput").value;
+
+  window.location.href =
+    `mailto:nbtruong207@gmail.com?subject=Liên hệ từ ${name}&body=Email: ${email}%0A%0A${message}`;
+}
