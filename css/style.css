@@ -52,7 +52,6 @@ body.dark {
 }
 
 body {
-  min-height: 100vh;
   background: var(--bg);
   color: var(--text);
 }
@@ -71,6 +70,7 @@ body.dark .nav {
 
 .nav-inner {
   max-width: 1100px;
+  width: 100%;
   margin: auto;
   padding: 14px 20px;
   display: flex;
@@ -105,6 +105,7 @@ body.dark .nav {
   left: 0;
   bottom: -6px;
   width: 100%;
+  m
   height: 3px;
   border-radius: 10px;
   background: var(--primary);
@@ -132,9 +133,14 @@ body.dark .nav {
 
 
 .container {
-  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  width: 100%;
   margin: auto;
   margin-top: 55px;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -203,6 +209,9 @@ body.dark .nav {
 /* ================= CONTACT ================= */
 .contact-title {
   color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .contact-list a {
   display: block;
@@ -222,8 +231,8 @@ body.dark .nav {
 
 /* ================= FOOTER ================= */
 footer {
-  /* margin-top: 1px; */
-  padding: 5px;
+  margin-top: 10px;
+  /* padding: 5px; */
   text-align: center;
   font-size: 3px;
   color: var(--text-sub);
@@ -268,6 +277,9 @@ footer {
 .hi-text {
   font-size: 14px;
   color: #bcbcff;
+    background: linear-gradient(135deg, #6a5cff, #c77dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Typing text */
@@ -320,8 +332,10 @@ footer {
 
 .name {
   font-size: 30px;
-  font-weight: 700;
-  color: #fff;
+  font-weight: 700px;
+  background: linear-gradient(135deg, #6a5cff, #c77dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Typing text */
@@ -375,7 +389,10 @@ footer {
   gap: 32px;
   padding: 24px;
   border-radius: 24px;
-  background: linear-gradient(135deg,#0f1220,#151a3d);
+  box-shadow: var(--shadow);
+  text-shadow: 0 2px 10px rgba(106, 92, 255, 0.25);
+  /* background: linear-gradient(135deg,#0f1220,#151a3d); */
+  background: var(--card) ;
 }
 
 /* LEFT */
@@ -395,7 +412,7 @@ footer {
 
 /* RIGHT */
 .hero-right {
-  max-width: 500px;
+  max-width: 400px;
 }
 
 .hero-hi {
@@ -624,6 +641,8 @@ footer {
   gap: 8px;
   align-items: center;
   /* height: 400px; */
+  background-color: var(--shadow);
+  text-shadow: 0 2px 10px rgba(106, 92, 255, 0.25);
 }
 
 .service-tags span {
@@ -636,8 +655,8 @@ footer {
 }
 /* ===== ABOUT WRAP ===== */
 .about-wrap {
-  width: 880px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   margin: 30px auto;
   display: flex;
   flex-direction: column;
@@ -645,10 +664,10 @@ footer {
 
 /* ===== BOX CHUNG ===== */
 .about-wrap .card {
-  background: linear-gradient(135deg,#141a35,#1b234d);
+  /* background: linear-gradient(135deg,#141a35,#1b234d); */
   border-radius: 16px;
   padding: 16px 18px;        /* GIẢM PADDING */
-  box-shadow: 0 14px 32px rgba(0,0,0,.45);
+  /* box-shadow: 0 14px 32px rgba(0,0,0,.45); */
 }
 
 /* ===== TIÊU ĐỀ ===== */
@@ -750,12 +769,14 @@ footer {
 /* ===== CONTACT WRAP ===== */
 /* ===== CONTACT WRAP ===== */
 .card-service-box{
+  margin-top: -40px;
   text-align: center;
   font-size: 32px;
   font-weight: 700;
   /* margin: 40px 0; */
   color: var(--primary);
-  height: 500px;
+  height: 100px;
+  width: 350px;
 }
 .contact-box {
   max-width: 1100px;
@@ -794,15 +815,17 @@ footer {
   display: flex;
   justify-content: center;
   /* gap: 40px; */
-  align-items: flex-start;
-  margin-top: 0px;
+  align-items: center
 }
 
 /* RIGHT SIDE */
 .contact-main {
   display: flex;
   flex-direction: column;
-  
+  /* width: 350px; */
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 
@@ -897,6 +920,7 @@ footer {
 
 /* Title Contact */
 .contact-title {
+  margin-top: 20px;
   text-align: center;
   font-size: 32px;
   font-weight: 700;
@@ -914,10 +938,10 @@ footer {
 }
 /* ===== SERVICE ===== */
 .service-section {
-  width: 800px;
-  height: 70px;
-  margin: 40px auto;
-  background-color: rgba(255, 255, 255, 0.05);
+  width: 100%;
+  height: 90px;
+  /* margin: 20px auto; */
+  text-shadow: 0 2px 10px rgba(106, 92, 255, 0.25);
   border-radius: 18px;
 }
 
@@ -957,28 +981,37 @@ footer {
 
 /* ===== BANK ===== */
 .bank-section {
-  max-width: 900px;
-  margin: 60px auto;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 40px;
 }
 
 .bank-title {
+
   font-size: 28px;
   color: #6e2e2e;
-  margin-bottom: 28px;
-  margin-top: -25px;
+  margin-bottom: 20px;
+  margin-top: 5px;
 }
 
 .bank-grid {
   margin-top: -20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;   /* 👈 THÊM DÒNG NÀY */
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); */
+  gap: 5px;
 }
 
 .bank-card {
   background: rgba(255,255,255,.05);
+  max-width: 350px;
+  margin: 5px auto;
+  padding: 15px;
+  border-radius: 20px;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(99,102,241,.15);
@@ -1027,6 +1060,8 @@ footer {
 }
 
 .bank-note-wrap {
+ margin-top: -50px;
+ margin-bottom: 20px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1149,9 +1184,8 @@ footer {
 
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
+display: flex;
+margin-top: 10px;
 }
 
 /* CARD */
@@ -1193,7 +1227,8 @@ footer {
   /* font-weight: 400; */
 }
 .service-card-1{
-  height: 100px;
+  margin-top: 20px;
+  height: 180px;
 }
 .service-card-1 h3{
   display: flex;
@@ -1206,4 +1241,54 @@ footer {
   gap: 8px;
   align-items: center;
   height: 100px;
+}
+/* Responsive Mobile */
+@media (max-width: 768px) {
+
+  .bank-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bank-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .service-tags {
+    flex-wrap: wrap;
+  }
+
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.container-2{
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  /* width: 100%; */
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+.lhnhanh{
+  display: flex;
+align-items:center;
+justify-content: center;
+}
+.card-service-card{
+  /* margin-top: -40px; */
+  /* text-align: center; */
+  font-size: 32px;
+  font-weight: 700;
+  /* margin: 40px 0; */
+  color: var(--primary);
+  height: 100px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
 }
